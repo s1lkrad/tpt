@@ -1,20 +1,22 @@
 # IT infrastruktuuri dokumentatsioon
 
-## Kuidas me infrastruktuuri üles paneme
+## Miks me need valikud tegime
 
-Kõigepealt paigaldame Ubuntu 22.04 masinale Dockeri, mis võimaldab meil
-kõiki teenuseid konteinerites jooksutada ilma et nad üksteist segaksid.
+Valisime Ubuntu 22.04 sest see on tasuta, stabiilne ja laialdaselt kasutusel
+mistõttu on lihtne leida abi ja juhendeid. Kuna meie eritingimus on kiire kasv,
+valisime Dockeri mis võimaldab uusi teenuseid kiiresti lisada ilma kogu süsteemi
+uuesti seadistamata. Nginx valisime veebiserveriksq sest see on kerge ja kiire
+ning sobib hästi paljude kasutajate teenindamiseks. PostgreSQL valisime andmebaasiks
+sest see on usaldusväärne ja tasuta. Gitea valisime sest projekti nõue on kasutada
+isehostitavaid rakendusi ja see asendab meile GitHubi meie oma serveris.
 
-Seejärel paneme üles Nginx veebserveri, mis võtab vastu kõik päringud
-internetist ja suunab need õigetesse teenustesse. Nii saavad kasutajad
-ligi meie rakendustele.
+## Meeskond ja tööjaotus
 
-Pärast seda käivitame PostgreSQL andmebaasi, kuhu salvestatakse kogu
-ettevõtte andmed. Andmebaas töötab Nginxist eraldi konteineris.
+**Armand Mesikäpp** - Otsustav isik. Vastutas GitHub repo loomise, dokumentatsiooni
+kirjutamise ja projekti koordineerimise eest.
 
-Viimaks paneme üles Gitea, mis on meie isehostitav Git server. Sinna
-laadivad arendajad oma koodi üles ja saavad meeskonnaga koostööd teha
-ilma väliste teenuste kasutamiseta.
+**Kert Leppanen** - Vastutas serverite seadistamise eest, sealhulgas Ubuntu
+paigaldamine ja Docker keskkonna ülesseadmine.
 
-Kõik teenused on kirjeldatud `configs/docker-compose.yml` failis,
-millega saab kogu infrastruktuuri ühe käsuga käivitada.
+**Albert Raude** - Vastutas teenuste seadistamise eest, sealhulgas Nginx,
+PostgreSQL ja Gitea konteinerite konfigureerimine.
