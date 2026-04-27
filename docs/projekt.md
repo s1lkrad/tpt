@@ -6,10 +6,16 @@
 - **Eritingimus:** Kiire kasv (skaaleerimine)
 
 ## Infrastruktuuri plaan
-(täidetakse hiljem)
+- 1 server Ubuntu Server 22.04
+- Docker konteinerid teenuste jaoks
+- Nginx veebiserver
 
 ## Teenused
-(täidetakse hiljem)
+- Nginx - veebiserver
+- Docker - konteinerite haldus
+- PostgreSQL - andmebaas
+- Gitea - Git server
 
 ## Konfiguratsioonifailid
-(täidetakse hiljem)
+- `configs/docker-compose.yml`
+- `configs/nginx.conf`
