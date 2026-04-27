@@ -6,7 +6,7 @@
 - **Eritingimus:** Kiire kasv (skaaleerimine)
 
 ## Infrastruktuuri plaan
-- 1 server Ubuntu Server 22.04
+- Ubuntu  22.04
 - Docker konteinerid teenuste jaoks
 - Nginx veebiserver
 
